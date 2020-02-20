@@ -1,0 +1,11 @@
+# folders
+
+## IDEs
+.idea
+
+## Project
+data/*
+
+## Python
+venv
+.ipynb_checkpoints
