@@ -9,3 +9,4 @@ data/*
 ## Python
 venv
 .ipynb_checkpoints
+__pycache__
