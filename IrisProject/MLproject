@@ -1,0 +1,27 @@
+name: mlflow-2-projects
+
+entry_points:
+  main:
+    parameters:
+      config: {type: path, default: config/pipeline_config.yml}
+    command: "python src/pipelines/main.py --config={config}"
+
+  featurize:
+    parameters:
+      featurize-config: path
+    command: "python src/pipelines/featurize.py --featurize-config={featurize-config}"
+
+  split_train_test:
+    parameters:
+      split-train-test-config: path
+    command: "python src/pipelines/split_train_test.py --split-train-test-config={split-train-test-config}"
+
+  train:
+    parameters:
+      train-config: path
+    command: "python src/pipelines/train.py --train-config={train-config}"
+
+  evaluate:
+    parameters:
+      evaluate-config: path
+    command: "python src/pipelines/evaluate.py --evaluate-config={evaluate-config}"
